@@ -9,7 +9,14 @@ const SelectedItems = () => {
     <div className="selected">
       <h2>Selected Items</h2>
       {selectedItems.map((item) => {
-        return <Item isSelectable={false} title={item.title} id={+item.id} />;
+       return (
+          <Item
+            isSelectable={false}
+            title={item.title}
+            id={item.id}
+            key={item.id}
+          />
+        );
       })}
     </div>
   );
