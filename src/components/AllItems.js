@@ -23,6 +23,7 @@ const AllItems = () => {
             isSelectable={true}
             title={item.title}
             id={item.id}
+            key={item.id}
             handleCheck={() => getSelectedItems(item)}
           />
         );
