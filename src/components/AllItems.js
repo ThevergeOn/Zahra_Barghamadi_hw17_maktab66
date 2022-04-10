@@ -7,7 +7,7 @@ const AllItems = () => {
   const { getSelectedItems } = useContext(SelectedContext);
 
   useEffect(() => {
-    fetch("https://624cd439d71863d7a8103316.mockapi.io/items")
+    fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -21,7 +21,7 @@ const AllItems = () => {
         return (
           <Item
             isSelectable={true}
-            title={item.name}
+            title={item.title}
             id={item.id}
             handleCheck={() => getSelectedItems(item)}
           />
