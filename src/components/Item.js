@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Item = (props) => {
   return (
-    <React.Fragment>
+    <>
       {props.isSelectable ? (
         <div>
           <input
@@ -19,7 +19,7 @@ const Item = (props) => {
           <label>{props.title}</label>
         </div>
       )}
-    </React.Fragment>
+    </>
   );
 };
 
@@ -28,6 +28,5 @@ export default Item;
 Item.protoTypes = {
   isSelectable: PropTypes.bool,
   title: PropTypes.string,
-  id: PropTypes.number,
   handleCheck: PropTypes.func,
 };
